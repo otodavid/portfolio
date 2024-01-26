@@ -1,0 +1,33 @@
+.wrapper {
+  position: relative;
+}
+
+.sideNav {
+  width: 70%;
+  height: 100svh;
+  height: 100vh;
+  min-height: 100%;
+  left: auto;
+  padding: 1.5rem 2rem;
+  border: 0;
+}
+
+.close {
+  margin-left: auto;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--primary);
+  width: 100%;
+  padding-block: .5rem;
+  font-size: 1rem;
+}

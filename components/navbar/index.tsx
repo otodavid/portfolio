@@ -15,11 +15,12 @@ export default function Navbar() {
       setOpenMenu(true);
     }
   };
+  
   return (
     <nav className={styles.nav}>
-      <h1>Dave.dev</h1>
+      <h1>Logo</h1>
 
-      <MobileNav open={openMenu} handleNav={handleMenu} />
+      <MobileNav isDialogOpen={openMenu} handleDialog={handleMenu} />
 
       <button type='button' onClick={handleMenu} className={styles.menuBtn}>
         <FaBarsStaggered />

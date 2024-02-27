@@ -2,30 +2,28 @@
 
 import Link from 'next/link';
 import styles from './mobile-menu.module.css';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { FaXmark } from 'react-icons/fa6';
+import useFocusTrap from 'app/hooks/useFocusTrap';
+import { dialogProps } from 'app/types/types';
 
-export default function MobileNav({
-  open,
-  handleNav,
-}: {
-  open: boolean;
-  handleNav: () => void;
-}) {
-  const ref = useRef<HTMLDialogElement>(null);
+export default function MobileNav({ isDialogOpen, handleDialog }: dialogProps) {
+  const modal = useFocusTrap({ isDialogOpen, handleDialog });
 
   useEffect(() => {
-    if (open) {
-      ref.current?.showModal();
+    const dialog = modal.current?.firstElementChild as HTMLDialogElement;
+
+    if (isDialogOpen) {
+      dialog.showModal();
     } else {
-      ref.current?.close();
+      dialog.close();
     }
-  });
+  }, [modal, isDialogOpen]);
 
   return (
-    <div className={styles.wrapper}>
-      <dialog className={styles.sideNav} ref={ref}>
-        <button onClick={handleNav} className={styles.close}>
+    <div className={styles.wrapper} ref={modal}>
+      <dialog className={styles.sideNav}>
+        <button onClick={handleDialog} className={styles.close}>
           <FaXmark size={'1rem'} />
         </button>
         <ul className={styles.mobileMenu}>
@@ -45,7 +43,11 @@ export default function MobileNav({
             </Link>
           </li>
           <li>
-            <Link href='/contact' className={styles.navLink}>
+            <Link
+              href='/contact'
+              className={styles.navLink}
+              // ref={lastElementRef}
+            >
               Contact
             </Link>
           </li>

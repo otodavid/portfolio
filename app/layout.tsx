@@ -1,17 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter, Montserrat } from 'next/font/google';
+import { Inter, Montserrat, Nunito, Roboto } from 'next/font/google';
 import './globals.css';
-import Navbar from '@components/navbar';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-body',
-  display: 'swap',
-});
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-heading',
+  variable: '--font-inter',
   display: 'swap',
 });
 
@@ -26,10 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={`${inter.className} ${montserrat.className}`}>
-      <body className={inter.className}>
-        <Navbar />
-        {children}
+    <html lang='en' className={inter.variable}>
+      <body className='container'>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

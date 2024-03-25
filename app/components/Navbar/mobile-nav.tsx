@@ -7,6 +7,13 @@ import { FaXmark } from 'react-icons/fa6';
 import useFocusTrap from 'app/hooks/useFocusTrap';
 import { dialogProps } from 'app/types/types';
 
+const NAVLINKS = [
+  { name: 'Home', link: '/' },
+  { name: 'About', link: '/about' },
+  { name: 'Projects', link: '/projects' },
+  { name: 'Contact', link: '/contact' },
+];
+
 export default function MobileNav({ isDialogOpen, handleDialog }: dialogProps) {
   const modal = useFocusTrap({ isDialogOpen, handleDialog });
 
@@ -27,30 +34,13 @@ export default function MobileNav({ isDialogOpen, handleDialog }: dialogProps) {
           <FaXmark size={'1rem'} />
         </button>
         <ul className={styles.mobileMenu}>
-          <li>
-            <Link href='/' className={styles.navLink}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href='/about' className={styles.navLink}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href='/projects' className={styles.navLink}>
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='/contact'
-              className={styles.navLink}
-              // ref={lastElementRef}
-            >
-              Contact
-            </Link>
-          </li>
+          {NAVLINKS.map(({ name, link }) => (
+            <li key={name}>
+              <Link href={link} className={styles.navLink}>
+                {name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </dialog>
     </div>

@@ -1,6 +1,10 @@
 /* VARIABLES */
 :root {
-  --primary: #333;
+  --text-main: #c7cde3;
+  --text-light: #fff;
+  --text-dark: #333;
+  --bg-dark: #1a2030;
+  --accent: #7632a5;
 }
 
 /* RESET STYLES */
@@ -16,16 +20,19 @@
   font: inherit;
 }
 
-/* html {
-   color-scheme: light dark; 
-} */
+html {
+  color-scheme: light dark;
+}
 
 body {
   min-height: 100svh;
   min-height: 100vh;
-  font-family: var(--font-body) system-ui, -apple-system, BlinkMacSystemFont,
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
     sans-serif;
+
+  background-color: var(--bg-dark);
+  color: var(--text-main);
 }
 
 h1,
@@ -35,7 +42,12 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-  font-family: var(--font-heading);
+  color: var(--text-light);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
 }
 
 p {
@@ -60,6 +72,7 @@ button {
   display: block;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -67,4 +80,21 @@ button {
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
   }
+}
+
+/* CUSTOM STYLES */
+.container {
+  width: min(100% - 3rem, 800px);
+  margin-inline: auto;
+}
+
+.primary-btn {
+  /* background-color: #00AA8F; */
+  background-color: var(--accent);
+  padding: 0.8em 1.2em;
+  text-transform: capitalize;
+  border-radius: 6px;
+  color: var(--bg-dark);
+  font-weight: 500;
+  color: var(--text-light);
 }

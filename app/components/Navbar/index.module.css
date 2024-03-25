@@ -5,6 +5,12 @@
   padding: 1.5rem 2rem;
 }
 
+.navControls {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
 .menuBtn {
   background-color: transparent;
 }

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Cocktail Nation",
+    "tech": ["styled components", "react"],
+    "description": "This was an app that was created with the cocktail api",
+    "image": "/images/avatar.png"
+  },
+  {
+    "id": 2,
+    "name": "Foodnet",
+    "tech": ["styled components", "react"],
+    "description": "This was an app that was created with the cocktail api",
+    "image": "/images/avatar.png"
+  },
+  {
+    "id": 3,
+    "name": "Smart Library",
+    "tech": ["styled components", "react"],
+    "description": "This was an app that was created with the cocktail api",
+    "image": "/images/avatar.png"
+  }
+]

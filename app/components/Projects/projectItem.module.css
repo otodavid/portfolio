@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.header > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.tech {
+  display: flex;
+  gap: 1rem;
+}
+
+.tech_item {
+  display: inline-block;
+  width: max-content;
+  padding-inline: 8px;
+  background-color: #fff;
+  border-radius: 6px;
+
+  --react: hsl(192, 95%, 68%);
+}
+
+.tech_item[data-name='react'] {
+  color: var(--react);
+  background-color: hsla(192, 95%, 68%, 0.1);
+}

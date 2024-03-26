@@ -4,15 +4,21 @@ import Avatar from '@public/images/about-avatar.png';
 
 export default function About() {
   return (
-    <div>
-      <h2>About me</h2>
+    <div className={styles.about}>
+      <h2 className={styles.heading}>
+        <span className={styles.small_text}>A little</span>About me
+      </h2>
 
       <div>
         <div className={styles.avatar}>
-          <Image src={Avatar} alt="David's full avatar" />
+          <Image
+            src={Avatar}
+            alt="David's full avatar"
+            fill={true}
+          />
         </div>
 
-        <div className={styles.about}>
+        <div className={styles.content}>
           <p>
             My journey in computer science began with an unwavering curiosity
             about technology and a fascination with the world of programming.
@@ -32,8 +38,7 @@ export default function About() {
             While the world of code is fun (and annoying sometimes) I also enjoy
             maintaining a healthy balance. When I&apos;m not at the computer,
             you&apos;ll likely find me at a volleyball court, competing in a
-            &apos;friendly&apos; game of FIFA, or battling it out in
-            Warzone.
+            &apos;friendly&apos; game of FIFA, or battling it out in Warzone.
           </p>
         </div>
       </div>

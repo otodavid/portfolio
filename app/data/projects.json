@@ -4,20 +4,26 @@
     "name": "Cocktail Nation",
     "tech": ["styled components", "react"],
     "description": "This was an app that was created with the cocktail api",
-    "image": "/images/avatar.png"
+    "imagePath": "/images/avatar.png",
+    "githubUrl": "https://github.com/otodavid/cocktail-nation",
+    "demoUrl": "https://cocktailnation.netlify.app/"
   },
   {
     "id": 2,
     "name": "Foodnet",
     "tech": ["styled components", "react"],
     "description": "This was an app that was created with the cocktail api",
-    "image": "/images/avatar.png"
+    "imagePath": "/images/avatar.png",
+    "githubUrl": "https://github.com/otodavid/foodnet",
+    "demoUrl": "https://food-net.netlify.app/"
   },
   {
     "id": 3,
     "name": "Smart Library",
     "tech": ["styled components", "react"],
     "description": "This was an app that was created with the cocktail api",
-    "image": "/images/avatar.png"
+    "imagePath": "/images/avatar.png",
+    "githubUrl": "https://github.com/otodavid/Smart-Library",
+    "demoUrl": "http://smart-library.vercel.app/"
   }
 ]

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div>
+    <footer>
       <p>
         Designed and developed by David. Built with
         <a
@@ -32,6 +32,6 @@ export default function Footer() {
           Vercel.
         </a>
       </p>
-    </div>
+    </footer>
   );
 }

@@ -1,10 +1,10 @@
 /* VARIABLES */
 :root {
-  --text-main: #c7cde3;
+  --text-main: #cbccce;
   --text-light: #fff;
   --text-dark: #333;
-  --bg-dark: #1a2030;
-  --accent: #7632a5;
+  --bg-dark: #13161f;
+  --accent: #2c1996;
 }
 
 /* RESET STYLES */
@@ -43,6 +43,7 @@ h5,
 h6 {
   text-wrap: balance;
   color: var(--text-light);
+  font-weight: 700;
 }
 
 a {
@@ -83,6 +84,18 @@ button {
 }
 
 /* CUSTOM STYLES */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .container {
   width: min(100% - 3rem, 800px);
   margin-inline: auto;

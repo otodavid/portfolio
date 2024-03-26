@@ -1,0 +1,43 @@
+.about {
+  padding-top: 2rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  padding-block: 1em;
+  text-transform: uppercase;
+}
+
+.small_text {
+  font-size: 1rem;
+  display: block;
+  color: var(--accent);
+  text-transform: capitalize;
+}
+
+.avatar {
+  width: min(100%, 15rem);
+  aspect-ratio: 1/1;
+  position: relative;
+  background-color: var(--accent);
+  border-radius: 6px;
+}
+
+.avatar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.avatar > img {
+  object-fit: cover;
+  object-position: top left;
+}
+
+.content {
+  hyphens: auto;
+}
+
+.content p {
+  padding-top: 1em;
+}

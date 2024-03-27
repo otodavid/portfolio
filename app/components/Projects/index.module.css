@@ -1,4 +1,10 @@
 .heading {
-    font-size: 1.5rem;
-    padding-block: 1em;
+  font-size: 1.5rem;
+  padding-block: 1em;
+}
+
+.project_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1.5rem;
 }

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styles from './projectItem.module.css';
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa6';
 import ExternalLink from '@components/ExternalLink';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { iconsList } from 'app/utils/icons';
 
 interface ProjectItemProps {
   name: string;
@@ -23,9 +24,9 @@ export default function ProjectItem({
   tech,
 }: ProjectItemProps) {
   return (
-    <div>
-      <div className={styles.image}>
-        <Image src={imagePath} alt={name} height={100} width={100} />
+    <div className={styles.project_item}>
+      <div className={styles.project_image}>
+        <Image src={imagePath} alt={name} fill={true} />
       </div>
 
       <div className={styles.content}>
@@ -48,10 +49,11 @@ export default function ProjectItem({
         </div>
 
         <div className={styles.tech}>
-          {tech?.map((item) => (
-            <span key={item} data-name={item} className={styles.tech_item}>
-              {item}
-            </span>
+          {tech?.map((techName) => (
+            <p key={techName} data-name={techName} className={styles.tech_item}>
+              <span>{iconsList.get(techName)}</span>
+              {techName}
+            </p>
           ))}
         </div>
 

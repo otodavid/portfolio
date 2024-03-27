@@ -7,8 +7,8 @@ export default function Projects() {
     <div className={styles.projects}>
       <h2 className={styles.heading}>My Projects</h2>
 
-      <div>
-        {projects.map((data) => (
+      <div className={styles.project_list}>
+        {projects.map((data, id) => (
           <ProjectItem
             key={data.name}
             name={data.name}

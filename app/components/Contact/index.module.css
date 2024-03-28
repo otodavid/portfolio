@@ -1,0 +1,20 @@
+.contact {
+  margin-top: 2rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.5rem;
+  padding-block: 1em;
+}
+
+.socials {
+  width: max-content;
+  margin: 1rem auto;
+  padding-block: 1rem;
+  display: flex;
+  gap: 1.8rem;
+}

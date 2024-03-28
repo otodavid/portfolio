@@ -1,10 +1,10 @@
-import React from 'react';
+import styles from './index.module.css';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <p>
-        Designed and developed by David. Built with
+        Designed and developed by David Ojo. Built with{' '}
         <a
           href='https://nextjs.org/'
           target='_blank'
@@ -12,8 +12,8 @@ export default function Footer() {
           aria-label='Next.js (opens in a new tab)'
         >
           Next.js
-        </a>
-        and
+        </a>{' '}
+        and{' '}
         <a
           href='https://github.com/css-modules/css-modules'
           target='_blank'
@@ -21,7 +21,7 @@ export default function Footer() {
           aria-label='CSS Modules (opens in a new tab)'
         >
           CSS modules.
-        </a>
+        </a>{' '}
         Hosted on{' '}
         <a
           href='https://vercel.com/'

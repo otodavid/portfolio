@@ -26,7 +26,9 @@ export default function ProjectItem({
   return (
     <div className={styles.project_item}>
       <div className={styles.project_image}>
-        <Image src={imagePath} alt={name} fill={true} />
+        <ExternalLink url={demoUrl} title={name + ' demo'}>
+          <Image src={imagePath} alt={name} fill={true} />
+        </ExternalLink>
       </div>
 
       <div className={styles.content}>
@@ -34,17 +36,12 @@ export default function ProjectItem({
           <h3>{name}</h3>
 
           <div>
-            <ExternalLink
-              url={githubUrl}
-              title={name + ' Github'}
-              displayName={<FaGithub />}
-            />
-
-            <ExternalLink
-              url={demoUrl}
-              title={name + ' demo'}
-              displayName={<FaExternalLinkAlt />}
-            />
+            <ExternalLink url={githubUrl} title={name + ' Github'}>
+              <FaGithub />
+            </ExternalLink>
+            <ExternalLink url={demoUrl} title={name + ' demo'}>
+              <FaExternalLinkAlt />
+            </ExternalLink>
           </div>
         </div>
 
